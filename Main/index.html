@@ -73,7 +73,7 @@
     </div>
   </main>
 
-  <!--TODO: add Bootstrap Modal w/ a form for adding a new project -->
+  <!-✅ add Bootstrap Modal w/ a form for adding a new project -->
  <!-- Button trigger modal -->
 
 
@@ -81,15 +81,57 @@
 <div class="modal fade" id="new-project-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add a new project</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
+      <form id="project-form">
+
+        <!-- input header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add a new project</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- BODY-->
+        <div class="modal-body">
+
+          <!-- Project-Name input -->
+          <div class="mb-3">
+            <label for="project-name-input" class="form-label">Project Name</label>
+            <input type="email" class="form-control" id="project-name-input" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <!-- Project Type input. -->
+          <div class="mb-3">
+            <label for="project-type-input" class="form-label">Project Type</label>
+            <select class="form-select" aria-label="Default select example">
+              <option value="Web Application (Front End)">
+                Web Application (Front End)
+              </option>
+              <option value="Web Application (Back End)">
+                Web Application (Back End)
+              </option>
+              <option value="Web Application (Full Stack)">
+                Web Application (Full Stack)
+              </option>
+              <option value="Mobile Application">Mobile Application</option>
+              <option value="Print Campaign">Print Campaign</option>
+              <option value="Digital Marketing Campaign">
+                Digital Marketing Campaign
+              </option>
+            </select>
+          </div>
+
+          <!-- Project Date input -->
+          <div class="mb-3 ">
+            <label for="project-name-input" class="form-label">Project Date</label>
+            <input type="date" class="form-control" id="project-date-input">
+          </div>
+          ...
+        </div>
+        </form>
+
+      <!-- input FOOTER -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn--custom">Add Project</button>
       </div>
     </div>
