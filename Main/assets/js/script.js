@@ -1,5 +1,5 @@
 // TODO: save reference to important DOM elements using jQuery
-
+alert("works!");
 // TODO: write a function to handle displaying the time
 function displayTime() {
   // ...
