@@ -27,13 +27,15 @@ function saveProjectsToStorage(projects) {
 
 // TODO: write a function that gets project data from local storage and prints/displays it in the DOM
 function printProjectData() {
-  // TODO: clear current projects on the page (*hint!* how can you "empty" something in jQuery)
-
-  // TODO: get projects from localStorage (*hint!* call the function you already wrote!)
-
+  
+  projectDisplayEL.empty();
+  
+var projects = readProjectsFromStorage();
   // TODO: loop through each project and create a row
 
-  // for () { // start for loop
+  for (var i = 0; i < projects.length; i++) {
+    var project = projects[i];
+  }
     // TODO: get the date of the current project in the loop
 
     // TODO: get date/time for START of today
@@ -104,3 +106,4 @@ projectFormEL.on("submit", handleProjectFormSubmit);
 // TODO: update the time every second
 
 // TODO: call the function to print the project data read from local storage on page load
+printProjectData();
