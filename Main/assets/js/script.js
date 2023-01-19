@@ -35,19 +35,25 @@ var projects = readProjectsFromStorage();
 
   for (var i = 0; i < projects.length; i++) {
     var project = projects[i];
-  }
-    // TODO: get the date of the current project in the loop
-
+  
+    // ✅ get the date of the current project in the loop
+    var projectName = project.name;
+    var projectType = project.type;
+    var projectDate = dayjs(project.date);
     // TODO: get date/time for START of today
 
-    // TODO: Create row and column elements (*hint!* <tr> -> <td>) for the project and add text to each cell
+    // ✅ Create row and column elements (*hint!* <tr> -> <td>) for the project and add text to each cell
+    var rowEl = $("<tr>");
+    var nameEl = $("<td>").text(projectName);
+    var typeEl = $("<td>").text(projectType);
+    var dateEl = 4("<td>").text(projectDate.format("MM/DD/YYYY"));
 
 
     // ----- TASK 4 - ONLY WORK ON THIS IF YOU'VE COMPLETED TASKS 1 - 3!!!
     // TODO: create a Delete button in its own table cell
     // (*hint!* save the index of the project as a `data-*` attribute on the button so we know
     // what project to delete when we click that button)
-
+    var deleteEl = $('<td><button class="btn btn-sm">X</button></td>');
     // ----- TASK 4 - ONLY WORK ON THIS IF YOU'VE COMPLETED TASKS 1 - 3!!!
     // TODO: add custom classes to the row to show if project is late or due today
     // (*hint!* comparing project date to today's date)
@@ -59,6 +65,8 @@ var projects = readProjectsFromStorage();
 
     // TODO: append elements to DOM to display them
   // } // end for loop
+  rowEl.append(nameEl, typeEl, dateEl, deleteEl);
+  projectDisplayEL.append(rowEl);
 }
 
 // ✅ write a function to add a project to local storage and call the fn that prints the project data
