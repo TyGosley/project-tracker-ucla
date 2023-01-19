@@ -7,7 +7,8 @@
   <title>Project Tracker</title>
 
   <!-- ✅ add Bootstrap CSS via CDN link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- ✅ add custom Google font to use in custom CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <!-- ✅ link custom style sheet from assets -->
@@ -20,7 +21,7 @@
     <h1>Project Tracker UCLA Project</h1>
     <h2>
       Current Time &amp; Date: <br />
-      <!-- TODO: update the content of this span dynamically with JavaScript -->
+      <!-- ✅ update the content of this span dynamically with JavaScript -->
       <span id="time-display"></span>
     </h2>
   </header>
@@ -35,7 +36,7 @@
             Instructions
           </h2>
           <div class="card-body">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text">Click the button below to open a form and provide information for the following:</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Project Name</li>
@@ -74,9 +75,7 @@
   </main>
 
   <!-✅ add Bootstrap Modal w/ a form for adding a new project -->
- <!-- Button trigger modal -->
-
-
+ 
 <!-- Modal -->
 <div class="modal fade" id="new-project-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -96,10 +95,9 @@
           <div class="mb-3">
             <label for="project-name-input" class="form-label">Project Name</label>
             <input type="text" class="form-control" id="project-name-input" aria-describedby="emailHelp">
-            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-          </div>
+            </div>
 
-          <!-- Project Type input. -->
+          <!-- Project Type input -->
           <div class="mb-3">
             <label for="project-type-input" class="form-label">Project Type</label>
             <select class="form-select" aria-label="Default select example" id="project-type-input">
@@ -125,15 +123,14 @@
             <label for="project-name-input" class="form-label">Project Date</label>
             <input type="date" class="form-control" id="project-date-input">
           </div>
-          ...
         </div>
-        </form>
-
-      <!-- input FOOTER -->
-      <div class="modal-footer">
-         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button type="submit" class="btn btn--custom" data-bs-dismiss="modal">Add Project</button>
-      </div>
+        
+        <!-- input FOOTER -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn--custom" data-bs-dismiss="modal">Add Project</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

@@ -5,6 +5,7 @@
   --red: #e74c3c;
   --lightred: #f9eae7;
   --lightyellow: #fff5d1;
+  --defaultGrey: #afafaf;
 }
 
 /* ✅  Apply custom Google font */
@@ -46,4 +47,9 @@ h6 {
 
 .project-today {
   background-color: var(--lightyellow);
+}
+
+.default-project {
+  color: var(--defaultGrey);
+  font-style: italic;
 }
