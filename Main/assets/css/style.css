@@ -39,3 +39,11 @@ h6 {
   background-color: var(--red);
   color: var(--light);
 }
+
+.project-late {
+  background-color: var(--lightred);
+}
+
+.project-today {
+  background-color: var(--lightyellow);
+}
