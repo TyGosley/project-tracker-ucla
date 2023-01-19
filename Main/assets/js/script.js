@@ -28,10 +28,15 @@ function saveProjectsToStorage(projects) {
 
 // TODO: write a function that gets project data from local storage and prints/displays it in the DOM
 function printProjectData() {
-  
-  projectDisplayEL.empty();
-  
+  // ✅: clear current projects on the page (*hint!* how can you "empty" something in jQuery)
+projectDisplayEL.empty();
+  // ✅: get projects from localStorage (*hint!* call the function you already wrote!)
 var projects = readProjectsFromStorage();
+
+  // if (!projects.length){
+  //   projectDisplayEL.append(defaultProjects);
+  // }
+
 
 // ✅ loop through each project and create a row
   for (var i = 0; i < projects.length; i++) {
@@ -71,6 +76,7 @@ var projects = readProjectsFromStorage();
   // } // end for loop
   rowEl.append(nameEl, typeEl, dateEl, deleteEl);
   projectDisplayEL.append(rowEl);
+}
 }
 
 // ✅ write a function to add a project to local storage and call the fn that prints the project data
