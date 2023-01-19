@@ -21,7 +21,7 @@ function readProjectsFromStorage() {
 
 // TODO: write a function that saves projects (passed as a parameter) to local storage
 function saveProjectsToStorage(projects) {
-  // ...
+  localStorage.setItem("projects", JSON.stringify(projects));
 }
 
 // TODO: write a function that gets project data from local storage and prints/displays it in the DOM
@@ -62,17 +62,30 @@ function printProjectData() {
 // (*hint!* this should happen when the form in the modal is submitted)
 function handleProjectFormSubmit(event) {
   event.preventDefault();
-  console.log("submit works", event);
+  
   // TODO: read user input from the form
-
+var projectName = projectNameInputEl.val().trim();
+var projectName = projectTypeInputEl.val();
+var projectName = projectDateInputEl.val();
   // TODO: mold a new object with the data from above
+var newProject = {
+  name: projectName,
+  type: projectType,
+  date: projectDate
+}
 
   // TODO: add project to local storage w/ the function you already wrote
   // (*hint!* make sure it doesn't overwrite other projects, but rather ADDS it)
+var projects = []; //TODO: write and call readProjects
+projects.push(newProject);
 
-  // TODO: print project data with the function you wrote
-
-  // TODO: clear the form inputs
+saveProjectsToStorage(projects)
+  
+printProjectData();
+  
+  projectNameInputEl.val("");
+  projectTypeInputEl.val("");
+  projectDateInputEl.val("");
 }
 
 // ----- TASK 4 - ONLY WORK ON THIS IF YOU'VE COMPLETED TASKS 1 - 3!!!
