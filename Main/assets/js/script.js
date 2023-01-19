@@ -16,7 +16,8 @@ function displayTime() {
 
 // TODO: write a function to read projects from local storage
 function readProjectsFromStorage() {
-  // ...
+  var projects = JSON.parse(localStorage.getItem("projects")) || [];
+  return projects;
 }
 
 // TODO: write a function that saves projects (passed as a parameter) to local storage
@@ -74,9 +75,8 @@ var newProject = {
   date: projectDate
 }
 
-  // TODO: add project to local storage w/ the function you already wrote
-  // (*hint!* make sure it doesn't overwrite other projects, but rather ADDS it)
-var projects = []; //TODO: write and call readProjects
+  
+var projects = readProjectsFromStorage(); 
 projects.push(newProject);
 
 saveProjectsToStorage(projects)
