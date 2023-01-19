@@ -58,7 +58,7 @@ function printProjectData() {
   // } // end for loop
 }
 
-// TODO: write a function to add a project to local storage and call the fn that prints the project data
+// ✅ write a function to add a project to local storage and call the fn that prints the project data
 // (*hint!* this should happen when the form in the modal is submitted)
 function handleProjectFormSubmit(event) {
   event.preventDefault();
@@ -81,9 +81,9 @@ function handleDeleteProject() {
   // ...
 }
 
-// TODO: set up event listeners for new project form submission and
+// ✅ set up event listeners for new project form submission and
 projectFormEL.on("submit", handleProjectFormSubmit);
-// and to delete a project (<-- TASK 4 ONLY)
+// TODO: and to delete a project (<-- TASK 4 ONLY)
 // (*hint!* brush up on jQuery event delegation to listen for clicks on dynamically elements
 
 // TODO: call the function to display the initial time
