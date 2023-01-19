@@ -24,6 +24,7 @@ h6 {
 
 .btn--custom,
 .card-header--custom,
+.modal-header--custom,
 .header {
   background-color: var(--darkblue);
   color: var(--light);

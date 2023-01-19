@@ -1,4 +1,13 @@
 // TODO: save reference to important DOM elements using jQuery
+var timeDisplayEL = $("#time-display");
+var projectDisplayEL = $("#project-display");
+var projectFormEL = $("#project-form");
+
+// Form Inputs
+var projectNameInputEl = $("#project-name-input");
+var projectTypeInputEl = $("#project-type-input");
+var projectDateInputEl = $("#project-date-input");
+
 
 // TODO: write a function to handle displaying the time
 function displayTime() {
@@ -52,6 +61,8 @@ function printProjectData() {
 // TODO: write a function to add a project to local storage and call the fn that prints the project data
 // (*hint!* this should happen when the form in the modal is submitted)
 function handleProjectFormSubmit(event) {
+  event.preventDefault();
+  console.log("submit works", event);
   // TODO: read user input from the form
 
   // TODO: mold a new object with the data from above
@@ -71,6 +82,7 @@ function handleDeleteProject() {
 }
 
 // TODO: set up event listeners for new project form submission and
+projectFormEL.on("submit", handleProjectFormSubmit);
 // and to delete a project (<-- TASK 4 ONLY)
 // (*hint!* brush up on jQuery event delegation to listen for clicks on dynamically elements
 
